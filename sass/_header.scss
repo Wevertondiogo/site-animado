@@ -1,0 +1,198 @@
+@import 'reset';
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+.navigation
+{
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  &__container
+  {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #4e4e4e;
+  }
+  &__info
+  {
+    @extend %d-start;
+    width: 65%;
+    margin-left: 2%;
+   
+      }
+
+      .fa{
+       color: rgba(255,255,255,0.85);
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        padding: 0 10px;
+        &:hover
+        {
+           color: #fff;
+    }
+  }
+  .icon
+  {
+    @extend %d-end;
+    width: 25%;
+    margin-left: 2%;  
+    .fa
+    {
+      color: rgba(255,255,255,0.85);
+      cursor: pointer;
+      padding: 0 10px;
+      &:hover
+      {
+        color: #fff;
+      }
+    }
+  }
+  .navbar
+  {
+    @extend %d-center;
+    margin-top: 20px;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+    transition: all 0.5s linear;
+    &__brand
+    {
+      width: 16%;
+     @extend %d-start;
+      align-items: center;
+      height: 100%;
+      margin-bottom: 15.1px;
+      font: {
+        size: 25px;
+        weight:normal;
+      }
+      text-transform: capitalize;
+      color: #e9e7ea;
+      &:hover
+      {
+        text-decoration: none;
+      }
+    }
+    &__list
+    {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 80%;
+      height: 100%;
+      position: relative;
+      @include alinhamento(auto,25px,auto,auto);
+      &__item
+      {
+        list-style: none;
+        padding: 0 25px;
+        text-transform: capitalize;
+        font: {
+        size: 22px;
+        weight:normal;
+      }
+     
+      &--botao
+    {
+        padding: 0 25px;
+        text-transform: uppercase;
+        height: 40px;
+        background-color: #4965ea;
+        border-radius: 5px;
+        position: relative;
+        @include alinhamento(-2px,auto,auto,auto);
+        transition: all 0.3s ease-out;
+        display: flex;
+        align-items: center;
+        letter-spacing: 1.5px;
+      
+      &:hover
+      {
+        background-color: transparent;
+        border: 2px solid #3c55d3;
+      }
+      &__link
+      {
+        color: #c4ddff;
+        
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      &__arrow
+      {
+        position: absolute;
+        @include alinhamento(45%,auto,auto,30px);
+        width: 10px;
+        height: 10px;
+        border-top:2px solid #fff;
+        border-left:2px solid #fff;
+        transform: translateY(-50%) rotate(135deg);
+        cursor: pointer;
+        opacity: 0;
+        transition:all 0.5s ease-out;
+      }
+    }
+      &__link
+      {
+        position: relative;
+        color: #e9e7ea;
+        transition: all 0.2s ease-out;
+        &:hover
+        {
+          color: #5775f7;
+         text-decoration: none;
+        }
+      }
+     
+    }
+    .dropdown
+    {
+      @extend %d-col;
+      background-color: #000;
+      margin-top: 5px;
+      position: absolute;
+      border-top: 3px solid #4a61eb;
+      width:220px;
+     
+     &__link
+      {
+        width: 100%;
+        color: #e9e7ea;
+        transition: all 0.3s ease-out;
+        text-align: start;
+        padding-left: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 40px;
+
+        font: {
+          size: 18px;
+          weight:normal;
+        }
+        &:hover
+        {
+          text-decoration: none;
+          background-color: #4a61eb;
+        }
+      }
+    }
+    }
+  }
+  
+  }
+  .test
+  {
+    background-color: #000;
+    position: fixed;
+    transform: translate3d(0,-70px,0);
+    z-index: 999;
+
+  }
+}

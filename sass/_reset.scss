@@ -1,0 +1,48 @@
+%d-start
+{
+  display: flex;
+  justify-content: flex-start;
+}
+%d-end
+{
+  display: flex;
+  justify-content: flex-end;
+}
+%d-col
+{
+  display: flex;
+  flex-direction: column;
+}
+%d-center
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%d-between
+{
+  display: flex;
+  justify-content: space-between;
+}
+%d-around
+{
+  display: flex;
+  justify-content: space-around;
+}
+%d-evenly
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+%d-wrap
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin  alinhamento ($top,$left,$bottom,$right) {
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
